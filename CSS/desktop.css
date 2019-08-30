@@ -1,0 +1,107 @@
+body{
+    height: 100%;
+}
+/*最大的盒子*/
+.wrap{
+    position : relative;
+    /*盒子自动随内容高度自适应
+    min-height: 1500px;
+    height: auto !important;
+    */
+    z-index: 1;
+    width: 100%;
+    height: 1000px;
+    background: url(../image/desktop.jpg) no-repeat 0 0 /100% 100%;/*偏移0 0 宽高 */
+    background-size: cover;
+}
+
+/*项目盒子*/
+.projectwrap{
+    position : absolute;
+    top : 0px;
+    left : 0px;   
+}
+
+/*简历盒子*/
+.resumewrap{
+    position : absolute;
+    top : 134px;
+    left : 0px;
+    width : 100px;
+    z-index: 5;
+}
+
+/*负责标题的*/
+.titlewrap{
+    z-index: 6;
+}
+.title{
+    display: none;
+    z-index: 50;
+}
+
+.titleshow{
+    display: none;
+}
+
+.titleshow.active,.title.active{
+    display: block;
+    height: 32px;
+    width: 98px;
+    border: 1px solid #cccccc;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 50;
+}
+
+.titleshow.active{
+    width: 100px;
+    height: 34px;
+    border: none;
+    z-index: 10;
+}
+/*负责图标*/
+.imgwrap{
+    width: 100px;
+    height: 100px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+/*负责右键显示的大盒子*/
+.menuwrap{
+    display:none;
+    width: 100px;
+    height: 141px;/*如何设置随着子元素的高度而定高度撑开 这个不要设置在 .menuwrap.active 中，要不然用getComputerStyle会无法获取到*/
+}
+.menuwrap.active{
+    display: inline-block;
+    position: absolute;
+    background-color: #e20b0b;
+    overflow: hidden;
+   
+   
+ 
+}
+/*负责右键显示的每项*/
+
+.listItem{
+    display: inline-block;
+    position: absolute;
+    border-bottom: 1px solid #242424;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;   
+    text-align: center;
+    font-size: 16px;
+    clear: both;
+    /*padding-left: 10px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
